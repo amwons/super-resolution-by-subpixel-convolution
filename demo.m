@@ -1,10 +1,10 @@
-%% ³õÊ¼»¯
+%% ï¿½ï¿½Ê¼ï¿½ï¿½
 
 clc;
 clear;
 addpath('./src')
 
-%% ÔØÈë²âÊÔÍ¼Ïñ
+%% ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 
 im = imread('./img/100080.jpg');
 im = im(201:340, 101:240, 1);
@@ -19,7 +19,7 @@ model_name = ['./model/model_upscale_', num2str(upscale_factor),'.mat'];
 im_sr = SR_model(input, model_name);
 size(im_sr)
 toc
-%% ÏÔÊ¾
+%% ï¿½ï¿½Ê¾
 
 figure
 [~,~,h_sr, w_sr] = size(im_sr);
