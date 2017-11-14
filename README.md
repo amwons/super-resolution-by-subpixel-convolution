@@ -1,20 +1,22 @@
  ## 该项目做了三件事
 
 #### 1. 基于PyTorch训练了一系列单图像超分辨神经网络，超分辨系数从2-10。
-训练文件包含于`./train`文件夹
+该部分的实现参考了pytorch官方repo中的SR例程，训练程序包含于`./train`文件夹。该项目
+基于高效子像素卷积层[1]进行空间分辨率提升操作，训练速度极快。
+
+[1] ["Shi W, Caballero J, Huszar F, et al. Real-Time Single Image and
+    Video Super-Resolution Using an Efficient Sub-Pixel Convolutional
+    Neural Network[J]. 2016:1874-1883.](https://arxiv.org/abs/1609.05158)
+
 
 #### 2. 把训练好的模型权值转存为MATLAB文件。
 简单粗暴，异常直接
 ```python
 from __future__ import print_function
-import argparse
-import torch
-from torch.autograd import Variable
-from PIL import Image
-from torchvision.transforms import ToTensor
-import scipy.io as sio
 
+import torch
 import numpy as np
+import scipy.io as sio
 
 for i in [2, 3, 4, 5, 6, 7, 8, 9, 10]:
 
