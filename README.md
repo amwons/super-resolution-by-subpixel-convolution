@@ -40,3 +40,6 @@ for i in [2, 3, 4, 5, 6, 7, 8, 9, 10]:
 
 #### 3. 把网络的test过程移植到了MATLAB平台，并撰写了测试代码。
 模型权值已保存为matlab权值，直接在matlab中运行`demo.m`文件即可验证
+
+#### 4. 相关博客
+http://www.cnblogs.com/nwpuxuezha/p/7834344.html 
